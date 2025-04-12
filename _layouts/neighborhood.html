@@ -1,0 +1,228 @@
+{% extends "default.html" %}
+
+{% block content %}
+<section class="neighborhood-header">
+  <div class="container">
+    <h1>{{ page.title }}</h1>
+    <p class="lead">{{ page.description }}</p>
+    
+    <div class="neighborhood-meta">
+      <div class="meta-item">
+        <span class="meta-label">Average Rent:</span>
+        <span class="meta-value">${{ page.average_rent }}</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Walk Score:</span>
+        <span class="meta-value">{{ page.walk_score }}/100</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Transit Score:</span>
+        <span class="meta-value">{{ page.transit_score }}/100</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Bike Score:</span>
+        <span class="meta-value">{{ page.bike_score }}/100</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="neighborhood-overview">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="content-section">
+          <h2>About {{ page.title }}</h2>
+          {{ page.content }}
+        </div>
+        
+        <div class="content-section">
+          <h2>Living in {{ page.title }}</h2>
+          <div class="pros-cons">
+            <div class="pros">
+              <h3>Pros</h3>
+              <ul>
+                {% for pro in page.pros %}
+                  <li>{{ pro }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+            <div class="cons">
+              <h3>Cons</h3>
+              <ul>
+                {% for con in page.cons %}
+                  <li>{{ con }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="content-section">
+          <h2>Transportation</h2>
+          <p>{{ page.transportation_details }}</p>
+          
+          <div class="transportation-options">
+            {% if page.public_transit %}
+              <div class="transport-item">
+                <h4>Public Transit</h4>
+                <ul>
+                  {% for item in page.public_transit %}
+                    <li>{{ item }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+            
+            {% if page.major_roads %}
+              <div class="transport-item">
+                <h4>Major Roads</h4>
+                <ul>
+                  {% for road in page.major_roads %}
+                    <li>{{ road }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+        
+        <div class="content-section">
+          <h2>Amenities</h2>
+          
+          <div class="amenities-grid">
+            <div class="amenity-category">
+              <h3>Dining & Nightlife</h3>
+              <ul>
+                {% for place in page.dining_nightlife %}
+                  <li>{{ place }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+            
+            <div class="amenity-category">
+              <h3>Parks & Recreation</h3>
+              <ul>
+                {% for place in page.parks_recreation %}
+                  <li>{{ place }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+            
+            <div class="amenity-category">
+              <h3>Shopping</h3>
+              <ul>
+                {% for place in page.shopping %}
+                  <li>{{ place }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+            
+            <div class="amenity-category">
+              <h3>Schools</h3>
+              <ul>
+                {% for school in page.schools %}
+                  <li>{{ school }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4">
+        <div class="sidebar">
+          <div class="sidebar-widget">
+            <h3>Neighborhood Map</h3>
+            <div class="neighborhood-map" id="map" data-lat="{{ page.map_lat }}" data-lng="{{ page.map_lng }}" data-zoom="{{ page.map_zoom }}"></div>
+          </div>
+          
+          <div class="sidebar-widget">
+            <h3>Rental Prices</h3>
+            <div class="price-ranges">
+              <div class="price-range">
+                <span class="range-type">Studio</span>
+                <span class="range-value">${{ page.rent_ranges.studio }}</span>
+              </div>
+              <div class="price-range">
+                <span class="range-type">1 Bedroom</span>
+                <span class="range-value">${{ page.rent_ranges.one_bed }}</span>
+              </div>
+              <div class="price-range">
+                <span class="range-type">2 Bedroom</span>
+                <span class="range-value">${{ page.rent_ranges.two_bed }}</span>
+              </div>
+              <div class="price-range">
+                <span class="range-type">3+ Bedroom</span>
+                <span class="range-value">${{ page.rent_ranges.three_plus_bed }}</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="sidebar-widget">
+            <h3>Featured Apartments</h3>
+            <div class="featured-apartments">
+              {% for apartment in site.data.featured_apartments[page.neighborhood_id] limit:3 %}
+                <div class="featured-apartment-card">
+                  <img src="{{ apartment.image }}" alt="{{ apartment.name }}">
+                  <h4>{{ apartment.name }}</h4>
+                  <p class="apartment-price">Starting at ${{ apartment.price }}</p>
+                  <a href="{{ apartment.url }}" class="btn btn-sm btn-outline">View Details</a>
+                </div>
+              {% endfor %}
+            </div>
+            <div class="text-center mt-3">
+              <a href="/search/?neighborhood={{ page.neighborhood_id }}" class="btn btn-primary">See All {{ page.title }} Apartments</a>
+            </div>
+          </div>
+          
+          <div class="sidebar-widget">
+            <h3>Nearby Neighborhoods</h3>
+            <ul class="nearby-neighborhoods">
+              {% for neighborhood in page.nearby_neighborhoods %}
+                <li><a href="/neighborhoods/{{ neighborhood.id }}/">{{ neighborhood.name }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="neighborhood-photos">
+  <div class="container">
+    <h2>{{ page.title }} Photos</h2>
+    <div class="photo-gallery">
+      {% for photo in page.photos %}
+        <div class="gallery-item">
+          <img src="{{ photo.url }}" alt="{{ photo.caption }}">
+          <p class="caption">{{ photo.caption }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="related-content">
+  <div class="container">
+    <h2>Related Articles</h2>
+    <div class="related-posts">
+      {% for post in site.posts %}
+        {% if post.neighborhoods contains page.neighborhood_id %}
+          <div class="related-post-card">
+            <img src="{{ post.image }}" alt="{{ post.title }}">
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <p>{{ post.excerpt | truncate: 120 }}</p>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://maps.googleapis.com/maps/api/js?key={{ site.google_maps_api_key }}&callback=initMap" async defer></script>
+<script src="{{ '/assets/js/neighborhood-map.js' | relative_url }}"></script>
+{% endblock %}

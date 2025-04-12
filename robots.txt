@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Block access to admin areas
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /wp-login/
+
+# Block access to specific files
+Disallow: /assets/css/
+Disallow: /assets/js/
+Disallow: /*.md$
+Disallow: /*.yml$
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.txt$
+
+# Allow access to sitemap
+Allow: /sitemap.xml
+
+# Sitemap location
+Sitemap: https://denverapartmentguide.com/sitemap.xml

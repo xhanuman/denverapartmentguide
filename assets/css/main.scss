@@ -1,0 +1,1094 @@
+/* Main SCSS file for Denver Apartment Guide */
+
+/* Variables */
+$primary-color: #2c5282;
+$secondary-color: #4299e1;
+$accent-color: #f56565;
+$text-color: #2d3748;
+$light-text: #718096;
+$background-color: #ffffff;
+$light-background: #f7fafc;
+$border-color: #e2e8f0;
+$success-color: #48bb78;
+$warning-color: #ed8936;
+$error-color: #e53e3e;
+
+$font-family-sans: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+$font-family-serif: 'Merriweather', Georgia, Cambria, 'Times New Roman', Times, serif;
+$font-family-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family-sans;
+  color: $text-color;
+  line-height: 1.5;
+  background-color: $background-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-serif;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: $primary-color;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+a {
+  color: $secondary-color;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+  
+  &:hover {
+    color: $primary-color;
+    text-decoration: underline;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Layout */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  
+  @media (min-width: $breakpoint-md) {
+    padding: 0 2rem;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+}
+
+.col {
+  flex: 1;
+  padding: 0 1rem;
+}
+
+.col-md-6 {
+  width: 100%;
+  padding: 0 1rem;
+  
+  @media (min-width: $breakpoint-md) {
+    width: 50%;
+  }
+}
+
+.col-lg-4 {
+  width: 100%;
+  padding: 0 1rem;
+  
+  @media (min-width: $breakpoint-lg) {
+    width: 33.333333%;
+  }
+}
+
+.col-lg-8 {
+  width: 100%;
+  padding: 0 1rem;
+  
+  @media (min-width: $breakpoint-lg) {
+    width: 66.666667%;
+  }
+}
+
+/* Header */
+.site-header {
+  background-color: $primary-color;
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  
+  a {
+    color: white;
+    text-decoration: none;
+    
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+.main-nav {
+  ul {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    @media (min-width: $breakpoint-md) {
+      display: flex;
+    }
+  }
+  
+  li {
+    margin-left: 1.5rem;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    
+    &:hover {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+    }
+  }
+}
+
+.mobile-menu-toggle {
+  display: block;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  
+  @media (min-width: $breakpoint-md) {
+    display: none;
+  }
+}
+
+/* Hero Section */
+.hero {
+  background-color: $primary-color;
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+  background-image: linear-gradient(rgba(44, 82, 130, 0.9), rgba(44, 82, 130, 0.9)), url('/assets/images/denver-skyline.jpg');
+  background-size: cover;
+  background-position: center;
+  
+  h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    
+    @media (min-width: $breakpoint-md) {
+      font-size: 3rem;
+    }
+  }
+  
+  .lead {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Search Bar */
+.search-bar {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  
+  .search-container {
+    display: flex;
+    margin-bottom: 1rem;
+    
+    input {
+      flex: 1;
+      padding: 0.75rem 1rem;
+      border: none;
+      border-radius: 4px 0 0 4px;
+      font-size: 1rem;
+    }
+    
+    .search-button {
+      background-color: $accent-color;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+      
+      &:hover {
+        background-color: darken($accent-color, 10%);
+      }
+    }
+  }
+  
+  .search-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    
+    select {
+      flex: 1;
+      min-width: 120px;
+      padding: 0.5rem;
+      border: 1px solid $border-color;
+      border-radius: 4px;
+      background-color: white;
+      font-size: 0.875rem;
+    }
+  }
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn-primary {
+  background-color: $primary-color;
+  color: white;
+  
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    color: white;
+  }
+}
+
+.btn-secondary {
+  background-color: $secondary-color;
+  color: white;
+  
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+    color: white;
+  }
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid $primary-color;
+  color: $primary-color;
+  
+  &:hover {
+    background-color: $primary-color;
+    color: white;
+  }
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+/* Sections */
+section {
+  padding: 4rem 0;
+  
+  &:nth-child(even) {
+    background-color: $light-background;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .section-lead {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    font-size: 1.125rem;
+    color: $light-text;
+  }
+}
+
+/* Neighborhood Cards */
+.neighborhood-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  
+  @media (min-width: $breakpoint-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.neighborhood-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  h3 {
+    padding: 1.25rem 1.25rem 0.5rem;
+    margin-top: 0;
+  }
+  
+  p {
+    padding: 0 1.25rem;
+    color: $light-text;
+  }
+  
+  .neighborhood-meta {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1.25rem;
+    margin-bottom: 1rem;
+    
+    .meta-item {
+      margin-right: 1rem;
+      font-size: 0.875rem;
+      color: $light-text;
+    }
+  }
+  
+  .btn {
+    margin: 0 1.25rem 1.25rem;
+  }
+}
+
+/* Market Trends */
+.trend-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+  
+  @media (min-width: $breakpoint-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.trend-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  
+  h3 {
+    font-size: 1.125rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .trend-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $primary-color;
+    margin-bottom: 0.5rem;
+  }
+  
+  .trend-change {
+    font-size: 0.875rem;
+    
+    &.positive {
+      color: $success-color;
+    }
+    
+    &.negative {
+      color: $error-color;
+    }
+  }
+  
+  .trend-detail {
+    font-size: 0.875rem;
+    color: $light-text;
+  }
+}
+
+/* Apartment Listings */
+.listing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.apartment-listing {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+  .listing-image {
+    position: relative;
+    
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .listing-badge {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background-color: $accent-color;
+      color: white;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+  }
+  
+  .listing-content {
+    padding: 1.25rem;
+    
+    h3 {
+      margin-top: 0;
+      margin-bottom: 0.25rem;
+    }
+    
+    .listing-location {
+      color: $light-text;
+      font-size: 0.875rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    .listing-details {
+      display: flex;
+      margin-bottom: 0.75rem;
+      
+      .detail-item {
+        margin-right: 1rem;
+        font-size: 0.875rem;
+        color: $light-text;
+      }
+    }
+    
+    .listing-description {
+      margin-bottom: 1.25rem;
+      font-size: 0.875rem;
+    }
+  }
+}
+
+/* Resources */
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  
+  @media (min-width: $breakpoint-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.resource-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+  
+  .resource-icon {
+    margin-bottom: 1rem;
+    
+    img {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto;
+    }
+  }
+  
+  h3 {
+    font-size: 1.125rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    font-size: 0.875rem;
+    color: $light-text;
+    margin-bottom: 1rem;
+  }
+  
+  .resource-link {
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+}
+
+/* Property Managers */
+.cta-box {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  
+  h3 {
+    margin-top: 0;
+  }
+  
+  p {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Blog */
+.post-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.blog-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .blog-content {
+    padding: 1.25rem;
+    
+    h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+      
+      a {
+        color: $primary-color;
+        
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+    
+    .post-meta {
+      font-size: 0.75rem;
+      color: $light-text;
+      margin-bottom: 0.75rem;
+    }
+    
+    .post-excerpt {
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+    
+    .read-more {
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+  }
+}
+
+/* Neighborhood Detail */
+.neighborhood-header {
+  background-color: $primary-color;
+  color: white;
+  padding: 4rem 0;
+  
+  h1 {
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  .lead {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+  }
+  
+  .neighborhood-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    
+    .meta-item {
+      .meta-label {
+        font-size: 0.875rem;
+        opacity: 0.8;
+      }
+      
+      .meta-value {
+        font-size: 1.25rem;
+        font-weight: 600;
+        display: block;
+      }
+    }
+  }
+}
+
+.neighborhood-overview {
+  padding: 3rem 0;
+  
+  .content-section {
+    margin-bottom: 3rem;
+  }
+  
+  .pros-cons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    
+    @media (min-width: $breakpoint-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .pros, .cons {
+      background-color: $light-background;
+      padding: 1.5rem;
+      border-radius: 8px;
+      
+      h3 {
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
+      
+      ul {
+        padding-left: 1.5rem;
+        
+        li {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+    
+    .pros h3 {
+      color: $success-color;
+    }
+    
+    .cons h3 {
+      color: $warning-color;
+    }
+  }
+  
+  .transportation-options {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    
+    @media (min-width: $breakpoint-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .amenities-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    
+    @media (min-width: $breakpoint-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .amenity-category {
+      h3 {
+        font-size: 1.125rem;
+        margin-bottom: 0.75rem;
+      }
+      
+      ul {
+        padding-left: 1.5rem;
+        
+        li {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+  
+  .sidebar {
+    .sidebar-widget {
+      background-color: $light-background;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      
+      h3 {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+      }
+    }
+    
+    .neighborhood-map {
+      height: 300px;
+      background-color: #e2e8f0;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+    
+    .price-ranges {
+      .price-range {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid $border-color;
+        
+        &:last-child {
+          border-bottom: none;
+        }
+        
+        .range-type {
+          font-weight: 600;
+        }
+        
+        .range-value {
+          color: $primary-color;
+        }
+      }
+    }
+    
+    .featured-apartments {
+      .featured-apartment-card {
+        margin-bottom: 1.5rem;
+        
+        img {
+          width: 100%;
+          height: 150px;
+          object-fit: cover;
+          border-radius: 4px;
+          margin-bottom: 0.75rem;
+        }
+        
+        h4 {
+          font-size: 1rem;
+          margin-top: 0;
+          margin-bottom: 0.25rem;
+        }
+        
+        .apartment-price {
+          font-size: 0.875rem;
+          color: $light-text;
+          margin-bottom: 0.75rem;
+        }
+      }
+    }
+    
+    .nearby-neighborhoods {
+      list-style: none;
+      padding: 0;
+      
+      li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid $border-color;
+        
+        &:last-child {
+          border-bottom: none;
+        }
+        
+        a {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.neighborhood-photos {
+  background-color: $light-background;
+  
+  .photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    
+    @media (min-width: $breakpoint-sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media (min-width: $breakpoint-lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .gallery-item {
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 0.5rem;
+      }
+      
+      .caption {
+        font-size: 0.875rem;
+        color: $light-text;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.related-content {
+  .related-posts {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    
+    @media (min-width: $breakpoint-md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .related-post-card {
+      img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 0.75rem;
+      }
+      
+      h3 {
+        font-size: 1.125rem;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+      }
+      
+      p {
+        font-size: 0.875rem;
+        color: $light-text;
+      }
+    }
+  }
+}
+
+/* Footer */
+.site-footer {
+  background-color: $primary-color;
+  color: white;
+  padding: 4rem 0 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+  
+  @media (min-width: $breakpoint-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.footer-column {
+  h3 {
+    color: white;
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    li {
+      margin-bottom: 0.75rem;
+    }
+    
+    a {
+      color: rgba(255, 255, 255, 0.8);
+      
+      &:hover {
+        color: white;
+      }
+    }
+  }
+  
+  p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    
+    a {
+      color: white;
+      font-size: 1.5rem;
+      
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  
+  p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-links {
+    a {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.875rem;
+      margin: 0 0.5rem;
+      
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+
+/* Utilities */
+.text-center {
+  text-align: center;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: $breakpoint-sm) {
+  .hero {
+    padding: 3rem 0;
+  }
+  
+  section {
+    padding: 3rem 0;
+  }
+}
+
+/* Accessibility */
+:focus {
+  outline: 3px solid $secondary-color;
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
