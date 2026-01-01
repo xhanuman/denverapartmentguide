@@ -1,0 +1,90 @@
+# Site settings
+title: Denver Apartment Guide
+email: contact@denverapartmentguide.com
+description: >-
+  Your comprehensive resource for finding apartments in Denver, Colorado. 
+  Explore neighborhood guides, rental listings, market trends, and resources for renters.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://denverapartmentguide.com" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
+
+# Collections
+collections:
+  neighborhoods:
+    output: true
+    permalink: /neighborhoods/:path/
+  resources:
+    output: true
+    permalink: /resources/:path/
+  market-reports:
+    output: true
+    permalink: /market-trends/:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Denver Apartment Guide Team"
+  - scope:
+      path: ""
+      type: "neighborhoods"
+    values:
+      layout: "neighborhood"
+  - scope:
+      path: ""
+      type: "resources"
+    values:
+      layout: "resource"
+  - scope:
+      path: ""
+      type: "market-reports"
+    values:
+      layout: "market-report"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Pagination
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+# SEO settings
+twitter:
+  username: DenverAptGuide
+  card: summary_large_image
+facebook:
+  publisher: DenverApartmentGuide
+social:
+  name: Denver Apartment Guide
+  links:
+    - https://twitter.com/DenverAptGuide
+    - https://www.facebook.com/DenverApartmentGuide
+    - https://www.instagram.com/denverapartmentguide/
+    - https://www.pinterest.com/denverapartmentguide/
+
+# Analytics
+google_analytics: UA-XXXXXXXX-X
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - README.md

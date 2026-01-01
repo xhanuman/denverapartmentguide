@@ -1,0 +1,143 @@
+{% extends "default.html" %}
+
+{% block content %}
+<section class="hero">
+  <div class="container">
+    <h1>Find Your Perfect Denver Apartment</h1>
+    <p class="lead">Your comprehensive guide to apartment living in the Mile High City</p>
+    
+    {% include search-bar.html %}
+    
+    <div class="hero-cta">
+      <a href="/neighborhoods/" class="btn btn-primary">Explore Neighborhoods</a>
+      <a href="/resources/first-time-renter-guide/" class="btn btn-secondary">Renter Resources</a>
+    </div>
+  </div>
+</section>
+
+<section class="featured-neighborhoods">
+  <div class="container">
+    <h2>Popular Denver Neighborhoods</h2>
+    <div class="neighborhood-grid">
+      {% for neighborhood in site.data.featured_neighborhoods limit:6 %}
+        {% include neighborhood-card.html %}
+      {% endfor %}
+    </div>
+    <div class="text-center mt-4">
+      <a href="/neighborhoods/" class="btn btn-outline">View All Neighborhoods</a>
+    </div>
+  </div>
+</section>
+
+<section class="market-trends">
+  <div class="container">
+    <h2>Denver Rental Market Trends</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="trend-card">
+          <h3>Current Average Rent</h3>
+          <p class="trend-value">${{ site.data.market_trends.average_rent }}</p>
+          <p class="trend-change {% if site.data.market_trends.rent_change > 0 %}positive{% else %}negative{% endif %}">
+            {{ site.data.market_trends.rent_change }}% from last month
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="trend-card">
+          <h3>Vacancy Rate</h3>
+          <p class="trend-value">{{ site.data.market_trends.vacancy_rate }}%</p>
+          <p class="trend-change {% if site.data.market_trends.vacancy_change < 0 %}positive{% else %}negative{% endif %}">
+            {{ site.data.market_trends.vacancy_change }}% from last month
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <a href="/market-trends/" class="btn btn-outline">View Full Market Report</a>
+    </div>
+  </div>
+</section>
+
+<section class="featured-listings">
+  <div class="container">
+    <h2>Featured Apartment Communities</h2>
+    <div class="listing-grid">
+      {% for listing in site.data.featured_listings limit:3 %}
+        {% include apartment-listing.html %}
+      {% endfor %}
+    </div>
+    <div class="text-center mt-4">
+      <a href="/search/" class="btn btn-outline">Search All Apartments</a>
+    </div>
+  </div>
+</section>
+
+<section class="resources">
+  <div class="container">
+    <h2>Resources for Denver Renters</h2>
+    <div class="resource-grid">
+      <div class="resource-card">
+        <div class="resource-icon">
+          <img src="/assets/images/icons/document.svg" alt="Document icon">
+        </div>
+        <h3>Tenant Rights Guide</h3>
+        <p>Understand your rights as a renter in Colorado</p>
+        <a href="/resources/tenant-rights/" class="resource-link">Learn More</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon">
+          <img src="/assets/images/icons/checklist.svg" alt="Checklist icon">
+        </div>
+        <h3>Moving Checklist</h3>
+        <p>Everything you need for a smooth move to your new apartment</p>
+        <a href="/resources/moving-checklist/" class="resource-link">Learn More</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon">
+          <img src="/assets/images/icons/application.svg" alt="Application icon">
+        </div>
+        <h3>Rental Application Guide</h3>
+        <p>Tips to improve your chances of application approval</p>
+        <a href="/resources/rental-application-guide/" class="resource-link">Learn More</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon">
+          <img src="/assets/images/icons/roommate.svg" alt="Roommate icon">
+        </div>
+        <h3>Roommate Finder</h3>
+        <p>Find the perfect roommate for your Denver apartment</p>
+        <a href="/resources/roommate-finder/" class="resource-link">Learn More</a>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <a href="/resources/" class="btn btn-outline">View All Resources</a>
+    </div>
+  </div>
+</section>
+
+<section class="property-managers">
+  <div class="container">
+    <h2>For Property Managers</h2>
+    <p class="section-lead">List your properties on Denver Apartment Guide to reach thousands of potential renters</p>
+    <div class="cta-box">
+      <h3>Increase Your Property's Visibility</h3>
+      <p>Join Denver's most comprehensive apartment resource and connect with qualified renters</p>
+      <a href="/property-management/" class="btn btn-primary">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<section class="blog-preview">
+  <div class="container">
+    <h2>Denver Apartment Living Blog</h2>
+    <div class="post-grid">
+      {% for post in site.posts limit:3 %}
+        {% include blog-card.html %}
+      {% endfor %}
+    </div>
+    <div class="text-center mt-4">
+      <a href="/blog/" class="btn btn-outline">Read More Articles</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

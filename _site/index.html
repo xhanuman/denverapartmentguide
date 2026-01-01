@@ -1,0 +1,321 @@
+---
+layout: default
+title: Denver Apartment Guide - Find Your Perfect Apartment in Denver, CO
+description: Your comprehensive resource for finding apartments in Denver, Colorado. Explore neighborhood guides, rental listings, market trends, and resources for renters.
+permalink: /
+---
+
+<section class="hero">
+  <div class="container">
+    <h1>Find Your Perfect Denver Apartment</h1>
+    <p class="lead">Your comprehensive guide to apartment living in the Mile High City</p>
+    
+    <div class="search-bar">
+      <form action="/search/" method="get">
+        <div class="search-container">
+          <input type="text" name="q" placeholder="Search neighborhoods, features, or areas...">
+          <button type="submit" class="search-button">Search</button>
+        </div>
+        <div class="search-filters">
+          <select name="beds">
+            <option value="">Any Beds</option>
+            <option value="studio">Studio</option>
+            <option value="1">1 Bedroom</option>
+            <option value="2">2 Bedrooms</option>
+            <option value="3">3+ Bedrooms</option>
+          </select>
+          <select name="price">
+            <option value="">Any Price</option>
+            <option value="1000">Under $1,000</option>
+            <option value="1500">Under $1,500</option>
+            <option value="2000">Under $2,000</option>
+            <option value="2500">Under $2,500</option>
+            <option value="3000">Under $3,000</option>
+          </select>
+          <select name="neighborhood">
+            <option value="">Any Neighborhood</option>
+            <option value="downtown">Downtown</option>
+            <option value="capitol-hill">Capitol Hill</option>
+            <option value="lodo">LoDo</option>
+            <option value="highland">Highland</option>
+            <option value="cherry-creek">Cherry Creek</option>
+          </select>
+        </div>
+      </form>
+    </div>
+    
+    <div class="hero-cta">
+      <a href="/neighborhoods/" class="btn btn-primary">Explore Neighborhoods</a>
+      <a href="/resources/first-time-renter-guide/" class="btn btn-secondary">Renter Resources</a>
+    </div>
+  </div>
+</section>
+
+<section class="featured-neighborhoods">
+  <div class="container">
+    <h2>Popular Denver Neighborhoods</h2>
+    <div class="neighborhood-grid">
+      <div class="neighborhood-card">
+        <img src="/assets/images/neighborhoods/downtown-denver.jpg" alt="Downtown Denver">
+        <h3>Downtown</h3>
+        <p>Urban living in the heart of Denver with easy access to dining, entertainment, and transit.</p>
+        <div class="neighborhood-meta">
+          <span class="meta-item">Avg. Rent: $1,950</span>
+          <span class="meta-item">Walk Score: 92</span>
+        </div>
+        <a href="/neighborhoods/downtown/" class="btn btn-outline">Explore Downtown</a>
+      </div>
+      
+      <div class="neighborhood-card">
+        <img src="/assets/images/neighborhoods/capitol-hill.jpg" alt="Capitol Hill">
+        <h3>Capitol Hill</h3>
+        <p>Historic neighborhood with diverse housing options, vibrant nightlife, and cultural attractions.</p>
+        <div class="neighborhood-meta">
+          <span class="meta-item">Avg. Rent: $1,650</span>
+          <span class="meta-item">Walk Score: 89</span>
+        </div>
+        <a href="/neighborhoods/capitol-hill/" class="btn btn-outline">Explore Capitol Hill</a>
+      </div>
+      
+      <div class="neighborhood-card">
+        <img src="/assets/images/neighborhoods/lodo.jpg" alt="LoDo (Lower Downtown)">
+        <h3>LoDo</h3>
+        <p>Trendy Lower Downtown district with converted lofts, upscale dining, and proximity to Union Station.</p>
+        <div class="neighborhood-meta">
+          <span class="meta-item">Avg. Rent: $2,100</span>
+          <span class="meta-item">Walk Score: 94</span>
+        </div>
+        <a href="/neighborhoods/lodo/" class="btn btn-outline">Explore LoDo</a>
+      </div>
+      
+      <div class="neighborhood-card">
+        <img src="/assets/images/neighborhoods/highland.jpg" alt="Highland">
+        <h3>Highland</h3>
+        <p>Charming neighborhood with Victorian homes, boutique shopping, and acclaimed restaurants.</p>
+        <div class="neighborhood-meta">
+          <span class="meta-item">Avg. Rent: $1,850</span>
+          <span class="meta-item">Walk Score: 85</span>
+        </div>
+        <a href="/neighborhoods/highland/" class="btn btn-outline">Explore Highland</a>
+      </div>
+      
+      <div class="neighborhood-card">
+        <img src="/assets/images/neighborhoods/cherry-creek.jpg" alt="Cherry Creek">
+        <h3>Cherry Creek</h3>
+        <p>Upscale area featuring luxury apartments, high-end shopping, and beautiful parks.</p>
+        <div class="neighborhood-meta">
+          <span class="meta-item">Avg. Rent: $2,300</span>
+          <span class="meta-item">Walk Score: 88</span>
+        </div>
+        <a href="/neighborhoods/cherry-creek/" class="btn btn-outline">Explore Cherry Creek</a>
+      </div>
+      
+      <div class="neighborhood-card">
+        <img src="/assets/images/neighborhoods/rino.jpg" alt="RiNo (River North Art District)">
+        <h3>RiNo</h3>
+        <p>Creative district with industrial-chic apartments, art galleries, breweries, and food halls.</p>
+        <div class="neighborhood-meta">
+          <span class="meta-item">Avg. Rent: $1,900</span>
+          <span class="meta-item">Walk Score: 83</span>
+        </div>
+        <a href="/neighborhoods/rino/" class="btn btn-outline">Explore RiNo</a>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <a href="/neighborhoods/" class="btn btn-outline">View All Neighborhoods</a>
+    </div>
+  </div>
+</section>
+
+<section class="market-trends">
+  <div class="container">
+    <h2>Denver Rental Market Trends</h2>
+    <div class="trend-grid">
+      <div class="trend-card">
+        <h3>Current Average Rent</h3>
+        <p class="trend-value">$1,929</p>
+        <p class="trend-change positive">+2.3% from last month</p>
+      </div>
+      
+      <div class="trend-card">
+        <h3>Vacancy Rate</h3>
+        <p class="trend-value">3.8%</p>
+        <p class="trend-change negative">-0.5% from last month</p>
+      </div>
+      
+      <div class="trend-card">
+        <h3>Most Affordable Area</h3>
+        <p class="trend-value">West Denver</p>
+        <p class="trend-detail">Avg. 1BR: $1,350</p>
+      </div>
+      
+      <div class="trend-card">
+        <h3>Most Expensive Area</h3>
+        <p class="trend-value">Cherry Creek</p>
+        <p class="trend-detail">Avg. 1BR: $2,100</p>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <a href="/market-trends/" class="btn btn-outline">View Full Market Report</a>
+    </div>
+  </div>
+</section>
+
+<section class="featured-listings">
+  <div class="container">
+    <h2>Featured Apartment Communities</h2>
+    <div class="listing-grid">
+      <div class="apartment-listing">
+        <div class="listing-image">
+          <img src="/assets/images/properties/the-paramount.jpg" alt="The Paramount Apartments">
+          <span class="listing-badge">Featured</span>
+        </div>
+        <div class="listing-content">
+          <h3>The Paramount</h3>
+          <p class="listing-location">Hampden, Denver</p>
+          <div class="listing-details">
+            <span class="detail-item">Studio-2 Beds</span>
+            <span class="detail-item">$1,205-$1,850</span>
+          </div>
+          <p class="listing-description">Modern apartments with resort-style pool, fitness center, and pet-friendly amenities.</p>
+          <a href="/properties/the-paramount/" class="btn btn-outline">View Details</a>
+        </div>
+      </div>
+      
+      <div class="apartment-listing">
+        <div class="listing-image">
+          <img src="/assets/images/properties/ladora-modern.jpg" alt="Ladora Modern Apartments">
+          <span class="listing-badge">Featured</span>
+        </div>
+        <div class="listing-content">
+          <h3>Ladora Modern Apartments</h3>
+          <p class="listing-location">East Denver</p>
+          <div class="listing-details">
+            <span class="detail-item">1-3 Beds</span>
+            <span class="detail-item">$1,535-$2,450</span>
+          </div>
+          <p class="listing-description">Luxury apartments with in-unit laundry, stainless steel appliances, and balconies.</p>
+          <a href="/properties/ladora-modern/" class="btn btn-outline">View Details</a>
+        </div>
+      </div>
+      
+      <div class="apartment-listing">
+        <div class="listing-image">
+          <img src="/assets/images/properties/aura-arts-district.jpg" alt="Aura Arts District">
+          <span class="listing-badge">Featured</span>
+        </div>
+        <div class="listing-content">
+          <h3>Aura Arts District</h3>
+          <p class="listing-location">RiNo, Denver</p>
+          <div class="listing-details">
+            <span class="detail-item">Studio-2 Beds</span>
+            <span class="detail-item">$1,390-$2,550</span>
+          </div>
+          <p class="listing-description">Industrial-chic apartments in the heart of Denver's art district with rooftop lounge.</p>
+          <a href="/properties/aura-arts-district/" class="btn btn-outline">View Details</a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <a href="/search/" class="btn btn-outline">Search All Apartments</a>
+    </div>
+  </div>
+</section>
+
+<section class="resources">
+  <div class="container">
+    <h2>Resources for Denver Renters</h2>
+    <div class="resource-grid">
+      <div class="resource-card">
+        <div class="resource-icon">
+          <img src="/assets/images/icons/document.svg" alt="Document icon">
+        </div>
+        <h3>Tenant Rights Guide</h3>
+        <p>Understand your rights as a renter in Colorado</p>
+        <a href="/resources/tenant-rights/" class="resource-link">Learn More</a>
+      </div>
+      
+      <div class="resource-card">
+        <div class="resource-icon">
+          <img src="/assets/images/icons/checklist.svg" alt="Checklist icon">
+        </div>
+        <h3>Moving Checklist</h3>
+        <p>Everything you need for a smooth move to your new apartment</p>
+        <a href="/resources/moving-checklist/" class="resource-link">Learn More</a>
+      </div>
+      
+      <div class="resource-card">
+        <div class="resource-icon">
+          <img src="/assets/images/icons/application.svg" alt="Application icon">
+        </div>
+        <h3>Rental Application Guide</h3>
+        <p>Tips to improve your chances of application approval</p>
+        <a href="/resources/rental-application-guide/" class="resource-link">Learn More</a>
+      </div>
+      
+      <div class="resource-card">
+        <div class="resource-icon">
+          <img src="/assets/images/icons/roommate.svg" alt="Roommate icon">
+        </div>
+        <h3>Roommate Finder</h3>
+        <p>Find the perfect roommate for your Denver apartment</p>
+        <a href="/resources/roommate-finder/" class="resource-link">Learn More</a>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <a href="/resources/" class="btn btn-outline">View All Resources</a>
+    </div>
+  </div>
+</section>
+
+<section class="property-managers">
+  <div class="container">
+    <h2>For Property Managers</h2>
+    <p class="section-lead">List your properties on Denver Apartment Guide to reach thousands of potential renters</p>
+    <div class="cta-box">
+      <h3>Increase Your Property's Visibility</h3>
+      <p>Join Denver's most comprehensive apartment resource and connect with qualified renters</p>
+      <a href="/property-management/" class="btn btn-primary">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<section class="blog-preview">
+  <div class="container">
+    <h2>Denver Apartment Living Blog</h2>
+    <div class="post-grid">
+      <div class="blog-card">
+        <img src="/assets/images/blog/first-apartment-tips.jpg" alt="First Apartment Tips">
+        <div class="blog-content">
+          <h3><a href="/blog/first-apartment-tips/">10 Essential Tips for Your First Denver Apartment</a></h3>
+          <p class="post-meta">April 5, 2025 • 8 min read</p>
+          <p class="post-excerpt">Moving into your first apartment in Denver? Here's everything you need to know to make the transition smooth and enjoyable.</p>
+          <a href="/blog/first-apartment-tips/" class="read-more">Read More</a>
+        </div>
+      </div>
+      
+      <div class="blog-card">
+        <img src="/assets/images/blog/denver-neighborhoods-guide.jpg" alt="Denver Neighborhoods Guide">
+        <div class="blog-content">
+          <h3><a href="/blog/denver-neighborhoods-guide/">The Ultimate Guide to Denver Neighborhoods for Renters</a></h3>
+          <p class="post-meta">March 22, 2025 • 12 min read</p>
+          <p class="post-excerpt">Explore the unique character, amenities, and rental options in Denver's diverse neighborhoods to find your perfect match.</p>
+          <a href="/blog/denver-neighborhoods-guide/" class="read-more">Read More</a>
+        </div>
+      </div>
+      
+      <div class="blog-card">
+        <img src="/assets/images/blog/rental-market-trends.jpg" alt="Rental Market Trends">
+        <div class="blog-content">
+          <h3><a href="/blog/rental-market-trends/">Denver Rental Market Trends: What to Expect in 2025</a></h3>
+          <p class="post-meta">March 10, 2025 • 10 min read</p>
+          <p class="post-excerpt">Analysis of current rental prices, vacancy rates, and predictions for Denver's apartment market in the coming year.</p>
+          <a href="/blog/rental-market-trends/" class="read-more">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <a href="/blog/" class="btn btn-outline">Read More Articles</a>
+    </div>
+  </div>
+</section>

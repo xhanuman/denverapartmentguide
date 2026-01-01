@@ -1,0 +1,448 @@
+<!-- Property Submission Form Include for Jekyll -->
+<!-- This file contains the HTML for the property submission form that will be included in submit-property.md -->
+
+<section class="page-header">
+    <div class="container">
+        <h1 class="display-4 mb-3">List Your Property</h1>
+        <p class="lead mb-0">Reach thousands of potential renters looking for apartments in Denver</p>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="bg-light" id="pricing">
+    <div class="container">
+        <h2 class="text-center mb-2">Choose Your Listing Package</h2>
+        <p class="text-center text-muted mb-5">Select the package that best fits your property needs</p>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="pricing-card h-100">
+                    <h3>Basic Listing</h3>
+                    <div class="price">Free<span class="period">/month</span></div>
+                    <p>Perfect for individual landlords with a single property</p>
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-item"><i class="fas fa-check"></i> Standard property listing</li>
+                        <li class="feature-item"><i class="fas fa-check"></i> Basic property details</li>
+                        <li class="feature-item"><i class="fas fa-check"></i> 1 property photo</li>
+                        <li class="feature-item"><i class="fas fa-check"></i> Contact information</li>
+                        <li class="feature-item text-muted"><i class="fas fa-times"></i> Featured placement</li>
+                        <li class="feature-item text-muted"><i class="fas fa-times"></i> Multiple photos</li>
+                        <li class="feature-item text-muted"><i class="fas fa-times"></i> Virtual tour</li>
+                        <li class="feature-item text-muted"><i class="fas fa-times"></i> Priority search ranking</li>
+                    </ul>
+                    <a href="#property-form" class="btn btn-outline-primary w-100">Select Basic</a>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="pricing-card featured h-100">
+                    <div class="badge bg-primary position-absolute top-0 end-0 m-3">Popular</div>
+                    <h3>Premium Listing</h3>
+                    <div class="price">$49<span class="period">/month</span></div>
+                    <p>Ideal for property managers with multiple units</p>
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-item"><i class="fas fa-check"></i> Enhanced property listing</li>
+                        <li class="feature-item"><i class="fas fa-check"></i> Detailed property description</li>
+                        <li class="feature-item"><i class="fas fa-check"></i> Up to 10 property photos</li>
+                        <li class="feature-item"><i class="fas fa-check"></i> Amenities list</li>
+                        <li class="feature-item"><i class="fas fa-check"></i> Floor plans</li>
+                        <li class="feature-item"><i class="fas fa-check"></i> Contact form</li>
+                        <li class="feature-item text-muted"><i class="fas fa-times"></i> Featured placement</li>
+                        <li class="feature-item text-muted"><i class="fas fa-times"></i> Priority search ranking</li>
+                    </ul>
+                    <a href="#property-form" class="btn btn-primary w-100">Select Premium</a>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="pricing-card h-100">
+                    <h3>Elite Listing</h3>
+                    <div class="price">$99<span class="period">/month</span></div>
+                    <p>For property management companies and luxury properties</p>
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-item"><i class="fas fa-check"></i> Premium property listing</li>
+                        <li class="feature-item"><i class="fas fa-check"></i> Detailed property description</li>
+                        <li class="feature-item"><i class="fas fa-check"></i> Unlimited property photos</li>
+                        <li class="feature-item"><i class="fas fa-check"></i> Amenities list</li>
+                        <li class="feature-item"><i class="fas fa-check"></i> Floor plans</li>
+                        <li class="feature-item"><i class="fas fa-check"></i> Contact form</li>
+                        <li class="feature-item"><i class="fas fa-check"></i> Featured placement</li>
+                        <li class="feature-item"><i class="fas fa-check"></i> Priority search ranking</li>
+                        <li class="feature-item"><i class="fas fa-check"></i> Virtual tour integration</li>
+                        <li class="feature-item"><i class="fas fa-check"></i> Social media promotion</li>
+                    </ul>
+                    <a href="#property-form" class="btn btn-outline-primary w-100">Select Elite</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Submission Form -->
+<section>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="form-section" id="property-form">
+                    <h2 class="mb-4">Property Submission Form</h2>
+                    <form>
+                        <div class="mb-4">
+                            <h3 class="h5">Package Selection</h3>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="radio" name="package" id="basic-package" value="basic">
+                                <label class="form-check-label" for="basic-package">
+                                    Basic Listing - Free
+                                </label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="radio" name="package" id="premium-package" value="premium" checked>
+                                <label class="form-check-label" for="premium-package">
+                                    Premium Listing - $49/month
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="package" id="elite-package" value="elite">
+                                <label class="form-check-label" for="elite-package">
+                                    Elite Listing - $99/month
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h3 class="h5">Property Information</h3>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="property-name" class="form-label">Property Name</label>
+                                    <input type="text" class="form-control" id="property-name" placeholder="e.g., The Aspen Apartments">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="property-type" class="form-label">Property Type</label>
+                                    <select class="form-select" id="property-type">
+                                        <option selected>Select property type</option>
+                                        <option value="apartment">Apartment Building</option>
+                                        <option value="condo">Condominium</option>
+                                        <option value="townhouse">Townhouse</option>
+                                        <option value="house">Single Family Home</option>
+                                        <option value="duplex">Duplex</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="property-address" class="form-label">Property Address</label>
+                                    <input type="text" class="form-control" id="property-address" placeholder="Street address">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="property-city" class="form-label">City</label>
+                                    <input type="text" class="form-control" id="property-city" value="Denver">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="property-state" class="form-label">State</label>
+                                    <input type="text" class="form-control" id="property-state" value="CO">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="property-zip" class="form-label">ZIP Code</label>
+                                    <input type="text" class="form-control" id="property-zip" placeholder="e.g., 80202">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="property-neighborhood" class="form-label">Neighborhood</label>
+                                    <select class="form-select" id="property-neighborhood">
+                                        <option selected>Select neighborhood</option>
+                                        <option value="capitol-hill">Capitol Hill</option>
+                                        <option value="downtown">Downtown</option>
+                                        <option value="highland">Highland</option>
+                                        <option value="rino">RiNo</option>
+                                        <option value="wash-park">Washington Park</option>
+                                        <option value="west-aurora">West Aurora</option>
+                                        <option value="glendale">Glendale</option>
+                                        <option value="edgewater">Edgewater</option>
+                                        <option value="east-lakewood">East Lakewood</option>
+                                        <option value="wheat-ridge">Wheat Ridge</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="year-built" class="form-label">Year Built</label>
+                                    <input type="number" class="form-control" id="year-built" placeholder="e.g., 2010">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h3 class="h5">Unit Details</h3>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="unit-type" class="form-label">Unit Type</label>
+                                    <select class="form-select" id="unit-type">
+                                        <option selected>Select unit type</option>
+                                        <option value="studio">Studio</option>
+                                        <option value="1br">1 Bedroom</option>
+                                        <option value="2br">2 Bedrooms</option>
+                                        <option value="3br">3 Bedrooms</option>
+                                        <option value="4br">4+ Bedrooms</option>
+                                        <option value="multiple">Multiple Unit Types</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="unit-size" class="form-label">Unit Size (sq ft)</label>
+                                    <input type="number" class="form-control" id="unit-size" placeholder="e.g., 850">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="monthly-rent" class="form-label">Monthly Rent ($)</label>
+                                    <input type="number" class="form-control" id="monthly-rent" placeholder="e.g., 1750">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="security-deposit" class="form-label">Security Deposit ($)</label>
+                                    <input type="number" class="form-control" id="security-deposit" placeholder="e.g., 1750">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lease-term" class="form-label">Lease Term</label>
+                                    <select class="form-select" id="lease-term">
+                                        <option selected>Select lease term</option>
+                                        <option value="month-to-month">Month-to-Month</option>
+                                        <option value="3-month">3 Months</option>
+                                        <option value="6-month">6 Months</option>
+                                        <option value="12-month">12 Months</option>
+                                        <option value="flexible">Flexible</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="date-available" class="form-label">Date Available</label>
+                                    <input type="date" class="form-control" id="date-available">
+                                </div>
+                                <div class="col-12">
+                                    <label for="property-description" class="form-label">Property Description</label>
+                                    <textarea class="form-control" id="property-description" rows="5" placeholder="Describe your property, highlight key features, and what makes it unique..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h3 class="h5">Amenities</h3>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h4 class="h6 mb-2">Unit Amenities</h4>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="amenity-ac" checked>
+                                        <label class="form-check-label" for="amenity-ac">Air Conditioning</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="amenity-dishwasher" checked>
+                                        <label class="form-check-label" for="amenity-dishwasher">Dishwasher</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="amenity-washer-dryer">
+                                        <label class="form-check-label" for="amenity-washer-dryer">In-Unit Washer/Dryer</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="amenity-balcony">
+                                        <label class="form-check-label" for="amenity-balcony">Balcony/Patio</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="amenity-hardwood">
+                                        <label class="form-check-label" for="amenity-hardwood">Hardwood Floors</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <h4 class="h6 mb-2">Building Amenities</h4>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="amenity-pool">
+                                        <label class="form-check-label" for="amenity-pool">Swimming Pool</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="amenity-fitness">
+                                        <label class="form-check-label" for="amenity-fitness">Fitness Center</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="amenity-parking" checked>
+                                        <label class="form-check-label" for="amenity-parking">Parking</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="amenity-elevator">
+                                        <label class="form-check-label" for="amenity-elevator">Elevator</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="amenity-laundry" checked>
+                                        <label class="form-check-label" for="amenity-laundry">Laundry Facilities</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <h4 class="h6 mb-2">Policies</h4>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="policy-pets">
+                                        <label class="form-check-label" for="policy-pets">Pets Allowed</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="policy-smoking">
+                                        <label class="form-check-label" for="policy-smoking">Smoking Allowed</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="policy-utilities" checked>
+                                        <label class="form-check-label" for="policy-utilities">Utilities Included</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="policy-background" checked>
+                                        <label class="form-check-label" for="policy-background">Background Check Required</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="policy-income" checked>
+                                        <label class="form-check-label" for="policy-income">Income Verification</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h3 class="h5">Photos & Media</h3>
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <label for="property-photos" class="form-label">Property Photos</label>
+                                    <input class="form-control" type="file" id="property-photos" multiple>
+                                    <div class="form-text">Upload photos of your property (Basic: 1 photo, Premium: up to 10 photos, Elite: unlimited)</div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="floor-plan" class="form-label">Floor Plan (Premium & Elite only)</label>
+                                    <input class="form-control" type="file" id="floor-plan">
+                                </div>
+                                <div class="col-12">
+                                    <label for="virtual-tour" class="form-label">Virtual Tour URL (Elite only)</label>
+                                    <input type="url" class="form-control" id="virtual-tour" placeholder="e.g., https://www.yourvirtualtour.com/property123">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h3 class="h5">Contact Information</h3>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="contact-name" class="form-label">Contact Name</label>
+                                    <input type="text" class="form-control" id="contact-name" placeholder="Your name">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="contact-title" class="form-label">Job Title</label>
+                                    <input type="text" class="form-control" id="contact-title" placeholder="Your position">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="contact-email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="contact-email" placeholder="Your email address">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="contact-phone" class="form-label">Phone</label>
+                                    <input type="tel" class="form-control" id="contact-phone" placeholder="Your phone number">
+                                </div>
+                                <div class="col-12">
+                                    <label for="company-name" class="form-label">Company Name (if applicable)</label>
+                                    <input type="text" class="form-control" id="company-name" placeholder="Your company name">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4" id="payment-section" style="display: none;">
+                            <h3 class="h5">Payment Information</h3>
+                            <div class="alert alert-info">
+                                <i class="fas fa-info-circle me-2"></i> This is a demo form. In a real implementation, this section would include secure payment processing.
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="card-name" class="form-label">Name on Card</label>
+                                    <input type="text" class="form-control" id="card-name" placeholder="Name as it appears on card">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="card-number" class="form-label">Card Number</label>
+                                    <input type="text" class="form-control" id="card-number" placeholder="•••• •••• •••• ••••">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="card-expiry-month" class="form-label">Expiration Month</label>
+                                    <select class="form-select" id="card-expiry-month">
+                                        <option selected>Month</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                        <option value="07">07</option>
+                                        <option value="08">08</option>
+                                        <option value="09">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="card-expiry-year" class="form-label">Expiration Year</label>
+                                    <select class="form-select" id="card-expiry-year">
+                                        <option selected>Year</option>
+                                        <option value="2025">2025</option>
+                                        <option value="2026">2026</option>
+                                        <option value="2027">2027</option>
+                                        <option value="2028">2028</option>
+                                        <option value="2029">2029</option>
+                                        <option value="2030">2030</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="card-cvv" class="form-label">CVV</label>
+                                    <input type="text" class="form-control" id="card-cvv" placeholder="•••">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="terms-agree" required>
+                                <label class="form-check-label" for="terms-agree">
+                                    I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg px-5">Submit Property</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Package selection
+    document.querySelectorAll('.pricing-card .btn').forEach(button => {
+        button.addEventListener('click', function(e) {
+            const packageType = this.textContent.includes('Basic') ? 'basic' : 
+                                this.textContent.includes('Premium') ? 'premium' : 'elite';
+            
+            document.querySelector(`#${packageType}-package`).checked = true;
+            
+            // Smooth scroll to form
+            document.querySelector('#property-form').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    
+    // Show/hide payment section based on package selection
+    document.querySelectorAll('input[name="package"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+            const paymentSection = document.getElementById('payment-section');
+            if (this.value === 'basic') {
+                paymentSection.style.display = 'none';
+            } else {
+                paymentSection.style.display = 'block';
+            }
+        });
+    });
+    
+    // Form submission (demo)
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        alert('Thank you for your submission! In a real implementation, your property would now be sent for review before being published on Denver Apartment Guide.');
+        
+        // Reset form
+        this.reset();
+    });
+</script>
