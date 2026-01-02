@@ -1,8 +1,11 @@
 <header class="site-header">
-  <div class="container">
-    <nav class="navbar">
-      <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
-      <ul class="nav-menu">
+  <div class="header-container">
+    <div class="site-logo">
+      <a href="{{ '/' | relative_url }}">{{ site.title | default: "Denver Apartment Guide" }}</a>
+    </div>
+    
+    <nav class="main-nav">
+      <ul>
         <li><a href="{{ '/neighborhoods/' | relative_url }}">Neighborhoods</a></li>
         <li><a href="{{ '/market-reports/' | relative_url }}">Market Reports</a></li>
         <li><a href="{{ '/resources/' | relative_url }}">Resources</a></li>

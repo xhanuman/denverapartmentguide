@@ -1,8 +1,39 @@
 <footer class="site-footer">
   <div class="container">
-    <div class="footer-content">
-      <p>&copy; {{ site.time | date: '%Y' }} {{ site.title | default: "Denver Apartment Guide" }}. All rights reserved.</p>
-      <p>Your guide to Denver apartment living!</p>
+    <div class="footer-grid">
+      <div class="footer-column">
+        <h3>{{ site.title }}</h3>
+        <p>Your comprehensive resource for finding apartments in Denver, Colorado.</p>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="{{ '/neighborhoods/' | relative_url }}">Neighborhoods</a></li>
+          <li><a href="{{ '/market-reports/' | relative_url }}">Market Reports</a></li>
+          <li><a href="{{ '/resources/' | relative_url }}">Resources</a></li>
+          <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="{{ '/resources/tenant-rights/' | relative_url }}">Tenant Rights</a></li>
+          <li><a href="{{ '/resources/moving-checklist/' | relative_url }}">Moving Checklist</a></li>
+          <li><a href="{{ '/resources/first-time-renter/' | relative_url }}">First-Time Renters</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <p>Email: {{ site.email }}</p>
+        <p>Denver, Colorado</p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
     </div>
   </div>
 </footer>
