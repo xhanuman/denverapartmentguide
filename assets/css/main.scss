@@ -929,3 +929,48 @@ section h2::after {
   white-space: nowrap;
   border: 0;
 }
+/* Add this to your main.scss file to fix the grid layout */
+
+/* Update resource-grid to be exactly 3 columns on desktop */
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .resource-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .resource-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Same fix for neighborhood-grid */
+.neighborhood-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .neighborhood-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .neighborhood-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .neighborhood-grid {
+    grid-template-columns: 1fr;
+  }
+}
