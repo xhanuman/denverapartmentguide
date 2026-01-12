@@ -974,3 +974,20 @@ section h2::after {
     grid-template-columns: 1fr;
   }
 }
+/* Force 3-column layout on desktop */
+@media (min-width: 768px) {
+  .resource-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  
+  .neighborhood-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .resource-grid,
+  .neighborhood-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
